@@ -27,12 +27,28 @@ p {
     padding-left: 20px;
 }
 
-#billAmt {
+#billAmt, #serviceQual, #numPeople {
     margin-left: 20px;
     font-size: 14px;
 }
 
-#billAmt:focus {
+#billAmt:focus, #serviceQual:focus, #numPeople:focus, button {
     border: 3px solid cornflowerblue;
     outline: none;
+}
+
+button {
+    display: block;
+    margin: 30px auto;
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 100px;
+    height: 35px;
+    font-size: 10pt;
+    background: cornflowerblue;
+    border-radius: 10px;
+}
+
+button:hover {
+    background: #A3C3D9;
 }
