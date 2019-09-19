@@ -42,15 +42,26 @@ function calculateTip() {
 
     var tipPerPerson = (amount * serviceQuality) / people;
 
+    var totalPerPerson = amount / people + tipPerPerson;
+
     tipPerPerson = tipPerPerson.toFixed(2); //Round the tip per person to 2 decimal points
 
+    totalPerPerson.toFixed(2);
 
     //Display that information to the user
 
     document.getElementById("tipAmount").style.display = "block"; 
     document.getElementById("tip").innerText = tipPerPerson;
+    document.getElementById("total").innerText = totalPerPerson;
 
 
+}
+
+function reset() {
+    document.getElementById("billAmt").value = "";
+    document.getElementById("serviceQual").value = "0";
+    document.getElementById("numPeople").value = "";
+    document.getElementById("tipAmount").style.display = "none";
 }
 
 //Function that is executed when the button is clicked
@@ -58,3 +69,8 @@ function calculateTip() {
 document.getElementById("calculateTip").onclick = function() {
     calculateTip();
 } 
+
+
+document.getElementById("reset").onclick = function() {
+    reset();
+}
