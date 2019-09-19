@@ -52,3 +52,9 @@ button {
 button:hover {
     background: #A3C3D9;
 }
+
+#tipAmount {
+    text-align: center;
+    font-size: 25pt;
+    font-weight: bold;
+}
